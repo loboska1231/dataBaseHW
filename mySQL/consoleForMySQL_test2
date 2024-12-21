@@ -1,0 +1,27 @@
+create table cities(
+    id int primary key auto_increment,
+    city varchar(255)
+);
+create table users(
+    id int primary key auto_increment,
+    name varchar(255) not null,
+    age int not null,
+    city_id int,
+    foreign key (city_id) references cities(id)
+);
+select * from users
+    join cities on cities.id = users.city_id;
+select * from users
+    right join cities on cities.id = users.city_id;
+
+
+
+select * from client
+    join loboska1231.application a on client.idClient = a.Client_idClient
+        join loboska1231.department d on client.Department_idDepartment = d.idDepartment
+        where Sum>10000;
+
+select client.*, CountOfWorkers from client
+    join loboska1231.application a on client.idClient = a.Client_idClient
+    join loboska1231.department d on client.Department_idDepartment = d.idDepartment
+    where Sum>10000;
