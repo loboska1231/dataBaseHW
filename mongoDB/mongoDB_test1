@@ -1,6 +1,6 @@
 use my_test_db;
 
-db.users.insertOne({name:'loh',age:22,status:true})
+db.users.insertOne({name:'toh',age:22,status:true})
 db.users.insertMany([
     {name:'cock',age:11,status:false},
     {name:'ck',age:1,status:false},
